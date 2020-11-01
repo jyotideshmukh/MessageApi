@@ -16,7 +16,7 @@ class MailNotificationHandler implements MessageHandlerInterface
      * @return void
      */
     
-       public function __invoke(MailNotification $mailNotification , MailerInterface $mailer)
+       public function __invoke(MailNotification $mailNotification )
       {
 
         //sending mail
@@ -30,9 +30,9 @@ class MailNotificationHandler implements MessageHandlerInterface
 
                   ->html($mailNotification->getBody());
 
-                  $mailer->send($mail);
+                 // $mailer->send($email);
 
-        echo 'Message '.$mailNotification ->getMsgId.' sending mail now';
+        echo 'Message '.$mailNotification ->getMsgId().' sending mail now';
           
       }
 
