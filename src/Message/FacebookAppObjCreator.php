@@ -20,7 +20,7 @@ class FacebookAppObjCreator{
         $this->app_id = '420840739316930';
         $this->app_secret = '8c5888d36fcfbd08fad0a24e262b979c';
         $this->default_graph_version ='v8.0';
-        $this->access_token = 'EAAFZBwJ7GJMIBAPug4EUrXqihzZASZChPSoAimxBZANn0ZALWUgdo7XPhRz9ptsOAk0xyhBNbvxNW24Yg7fLQVcNOhs8G9YFiG9mifYgdhZBK2EQylHAVQdZBNfbZBYZCZBfJYf0SRjATIOSboRVvisFsLhXJnfnVcCtP7ma9AhQfgTrCZCjwsMmMlLngxAdZCInoF8ZD';
+        $this->access_token = 'EAAFZBwJ7GJMIBAJkW7UjYhZAPN93lOW30KqtAZBfeQ4kVm7NyZArOT2L2ikatqQkg89LBGZCYDwDuzQ2t5VZBG2Xu39X0LzuoAVjVT1ZAQ2vno53aPcfZCF0jZCbUo2mFGO0qihAGaxDplo9QJEplrsWTbLPEvjF8ksJr293Lpwq4rU7iNDy87h9gznRwUtaGWjKUfXvG9qQx8JUCRXZCJZBOBNSb6XLeVRLpLkEWNqpr1HLwZDZD';
 
     }
 

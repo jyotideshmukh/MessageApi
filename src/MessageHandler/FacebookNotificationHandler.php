@@ -35,7 +35,18 @@ class FacebookNotificationHandler implements MessageHandlerInterface
         try {
             // Get the \Facebook\GraphNodes\GraphUser object for the current user.
             // If you provided a 'default_access_token', the '{access-token}' is optional.
+            $msg_params =[
+                "messaging_type"=> "UPDATE",
+                "recipient"=>[
+                                "id"=>$facebookNotification->getFacebookUserId()
+                ],
+                "message"=>[
+                                "text"=>"Hi Guys, I have started my new Artist page!"
+                ]
+            ];
             $response = $fb->get('/me', $fb->getDefaultAccessToken());
+            //$sentmessage =$fb->post('/messages',['params'=>$msg_params],$fb->getDefaultAccessToken());
+
         } catch(\Facebook\Exceptions\FacebookResponseException $e) {
             // When Graph returns an error
             echo 'Graph returned an error: ' . $e->getMessage();
@@ -47,6 +58,7 @@ class FacebookNotificationHandler implements MessageHandlerInterface
         }
 
         $me = $response->getGraphUser();
+
         echo 'Logged in as ' . $me->getName();
 
         echo 'sending facebook post now';
