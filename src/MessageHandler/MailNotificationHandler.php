@@ -3,7 +3,9 @@
 namespace App\MessageHandler;
 
 use App\Message\MailNotification;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
+use Symfony\Component\Mime\Email;
 
 class MailNotificationHandler implements MessageHandlerInterface
 {
@@ -14,12 +16,23 @@ class MailNotificationHandler implements MessageHandlerInterface
      * @return void
      */
     
-       public function __invoke(MailNotification $mailNotification )
+       public function __invoke(MailNotification $mailNotification , MailerInterface $mailer)
       {
 
         //sending mail
 
-        echo 'sending mail now';
+        $email = ( new Email() )
+                  ->from($mailNotification->getFromMailAddress())
+                 
+                  ->to($mailNotification->getToAddress())
+                  
+                  ->subject($mailNotification->getSubject())
+
+                  ->html($mailNotification->getBody());
+
+                  $mailer->send($mail);
+
+        echo 'Message '.$mailNotification ->getMsgId.' sending mail now';
           
       }
 

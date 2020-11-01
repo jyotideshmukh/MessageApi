@@ -20,7 +20,7 @@ class MailController extends AbstractController
 
         $msg_id = 1; 
 
-        $bus->dispatch( new MailNotification($msg_id));
+        $bus->dispatch( new MailNotification($msg_id,'sales@srijan.com','jyoti@mailinator.com','Sale for Diwali','<p>Grab the opportunity</p>'));
 
         return new Response("Mail message  sending Activity placed");
 
