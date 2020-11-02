@@ -4,7 +4,6 @@
     <list default="true" id="4f077f94-3c8e-424c-a8c3-97895e628c52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Message/FacebookAppObjCreator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Message/FacebookAppObjCreator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MessageHandler/FacebookNotificationHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/MessageHandler/FacebookNotificationHandler.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +138,8 @@
       <option name="presentableId" value="Default" />
       <updated>1604247293434</updated>
       <workItem from="1604247294859" duration="4216000" />
-      <workItem from="1604259743711" duration="7578000" />
+      <workItem from="1604259743711" duration="8061000" />
+      <workItem from="1604290646358" duration="114000" />
     </task>
     <servers />
   </component>
