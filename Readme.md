@@ -1,6 +1,6 @@
-#Provides AMQP integration for Symfony Messenger using Rabbitmq
+# Provides AMQP integration for Symfony Messenger using Rabbitmq
 
-#Created Messages directory and created 3 src/Messages Directory
+### Created Messages directory and created 3 src/Messages Directory
 
  MailNotification.php
  
@@ -8,7 +8,7 @@
  
  SmsNotification.php
  
- #Created Handlers for above these Messages in src/MessageHandler Directory
+### Created Handlers for above these Messages in src/MessageHandler Directory
  
  MailNotificationHandler.php - save messages in Messages entity and sending message
  
@@ -16,7 +16,7 @@
  
  SmsNotificationHandler.php - SMS not implemented yet
  
- #Created Controllers
+### Created Controllers
  
  MailController.php
  
@@ -24,7 +24,7 @@
  
  SmsController.php
  
- #In Controllers created action 
+### In Controllers created action
  pushMailMessage - dependancy injection of  MessageBusInterface
  
  Routes are like
@@ -38,11 +38,11 @@
  
  <hostname>/sendfbmsg - for sening fb message
  
- #For Facebook messages created Facebook Application
+### For Facebook messages created Facebook Application
  
  Installed Facebook php-sdk package
  
- #using graph api library sending messages
+### using graph api library sending messages
  
  Created Facebook Object created in src/Message/FacebookAppObjCreator.php
  
@@ -53,30 +53,30 @@
          $this->default_graph_version ='v8.0';
          $this->access_token = '<ACCEES_TOKEN>';
          
- #Used RabbitMq using docker
+### Used RabbitMq using docker
  
  Created docker-compose.yaml
  
  Pulled rabbitmq on port 5672
  
-# started conatainer 
+### started conatainer
 
 docker-composer up
 
-#Php extention amqp installed and did settings in php.ini
+### Php extention amqp installed and did settings in php.ini
 
-#Set %env(RABBITMQ_DSN)%' in messenger.yml
+### Set %env(RABBITMQ_DSN)%' in messenger.yml
 
-#set rabbitMq DNS
+### set rabbitMq DNS
 RABBITMQ_DSN=amqp://guest:guest@localhost:5672/%2f/messages
 
 
 Then run command
-#symfony console messenger:consume async -vv
+### symfony console messenger:consume async -vv
 It starts sending messages
 
 
-#Tried to create Message api using api API Platform
+### Tried to create Message api using api API Platform
 Created Messages entity
 
 using  @ApiResource() created api for messages -
@@ -103,7 +103,7 @@ Also I have created MessageSender as abstract class getPlatform as abstractom me
     }
 Also I have created MailPoster, FacebookPoster and SmsPoster - these three classes extends MessageSender class and implement thier own send message
 
-#getPlatform returns factory object of platfom like
+### getPlatform returns factory object of platfom like
 
     public function getPlatform(): PlatformConnector
     {
