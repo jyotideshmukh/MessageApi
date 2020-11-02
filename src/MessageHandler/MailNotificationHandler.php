@@ -43,6 +43,7 @@ class MailNotificationHandler implements MessageHandlerInterface
         $message->setMsgid($mailNotification->getMsgId());
         $this->em->persist($message);
         $this->em->flush();
+        sleep(5);
 
         //$event = new message($mailNotification->setMsgid());
 
